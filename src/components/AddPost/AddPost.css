@@ -1,0 +1,124 @@
+.register{
+    width: 450px;
+    height: 400px;
+    background-color : white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1000;
+    transition: 0.5s;
+    animation: pulse-add 0.8s;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top : 200px;
+    text-align: center;
+}
+@keyframes pulse-add{
+    0%{
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.registerWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+.registerLeft,.registerRight{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.registerLogo{
+    font-size: 50px;
+    font-weight: 800;
+    color: #1775ee;
+    margin-bottom: 10px;    
+}
+.registerDesc{
+    font-size: 24px;
+}
+.registerBox{
+    height: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+}
+ .registerInput{
+    height: 50px;
+    border: 1px solid #dddfe2;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.registerInput:focus{
+    outline: none!important;
+    border-color: #1b74e4;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1b74e4;
+}
+
+.signupButton{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1775ee;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 22px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(45deg,#00a8cc 10%,#318fff 50%,#8d46ff);
+    transition: .5s;
+    background-size: 200% auto;
+    align-self: center;
+    width: 80%;
+    animation: pulse-primary  1.5s infinite;
+}
+
+.signupButton:hover {
+    background-position: 100%;
+
+}
+@keyframes pulse-primary{
+0%{
+    box-shadow: 0 0 0 0 rgb(49 143 255 / 50%);
+}
+70%{
+    box-shadow: 0 0 0 10px rgb(49 143 255 / 0%);
+}
+100%{
+    box-shadow: 0 0 0 0 rgb(49 143 255 / 0%)
+}
+}
+.registerForgot{
+    text-align: center;
+    color: #1775ee;
+}
+.loginButtonRegister{
+    width: 60%;
+    align-self: center;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #42b72a;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+}
