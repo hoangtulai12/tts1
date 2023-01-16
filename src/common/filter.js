@@ -2,10 +2,8 @@
 
 
 const filter =(filterList,query,type)=>{
-        console.log(type);
         switch (type) {
             case "users":
-                console.log("filterUsers");
                 const usersFilterName =  filterList?.filter((user) => {
                     return user.name.toLowerCase().includes(query[0].toLowerCase())
                 }); 
@@ -23,7 +21,6 @@ const filter =(filterList,query,type)=>{
                 }
             case "posts" :
                 if("posts"){
-                    console.log("filterPosts");
                     const postsFilterTitle =  filterList?.filter((post) => {
                         return post.title.toLowerCase().includes(query[0].toLowerCase())
                     }); 

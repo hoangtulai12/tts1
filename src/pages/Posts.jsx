@@ -66,7 +66,6 @@ function Posts() {
         const fetchPost = async ()=>{
             try {
                 const res = await axios.get(url)
-                console.log(res);
                 dispatch({type : GET_POSTS,  payload: res.data })
             } catch (error) {
                 console.log(error);
@@ -133,7 +132,6 @@ const handleFilter =(e)=>{
     }
     const query = [titleElement.current.value,contentElement.current.value]
     const postsFilter = filter(posts, query,"posts")
-    console.log(postsFilter);
     dispatch( {type : FILTER_POSTS, payload: postsFilter })
     }
 
@@ -155,7 +153,6 @@ const handleClose = () => {
 const handleToggle = () => {
   dispatch({type : SET_IS_ADD_POST , payload : ! isAddPost })
 };
-console.log(isAlert);
     return (
 
         <Container style={{ marginTop :"50px"}} >

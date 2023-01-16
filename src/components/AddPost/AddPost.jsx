@@ -38,7 +38,6 @@ const handleClick = async (e) =>{
 const handleClose = (e) =>{
     dispatch({type :SET_IS_ADD_POST, payload : !isAddPost})
 }
-console.log(alert);
   return (
     <>
 

@@ -73,7 +73,6 @@ function reducer(state, actions) {
                 return u.id !== actions.payload.id
                 })
             arrr.push(actions.payload)
-            console.log(arrr);
             return{
              ...state,
              users : arrr
@@ -166,7 +165,6 @@ function reducer(state, actions) {
                 userPage : actions.payload
             }
             case SET_USERS_PER_PAGE :
-                console.log(actions.payload);
                 return{
                     ...state,
                     usersPerPage : actions.payload
@@ -177,7 +175,6 @@ function reducer(state, actions) {
                 postPage : actions.payload
             }
             case SET_POSTS_PER_PAGE :
-                console.log(actions.payload);
                 return{
                     ...state,
                     postsPerPage : actions.payload
