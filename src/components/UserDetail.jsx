@@ -8,7 +8,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useEffect,useState } from 'react';
 export default function UserDetail({user}) {
-    console.log(user);
     const rows = [
         user.id,
         user.name,

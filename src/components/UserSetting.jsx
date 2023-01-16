@@ -28,7 +28,6 @@ const handleSubmit = async (e) =>{
             status : statusElement.current.value
        }
         
-        console.log(user)
         try {
             const res = await axios.patch(url,user)
             dispatch({type :SET_IS_EDIT_USER, payload : !isEditUser})

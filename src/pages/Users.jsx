@@ -59,16 +59,12 @@ function Users() {
     /// navigate
     const navigate = useNavigate();
     const {pageParams,perPageParams} = useParams()
-    // console.log(params?.page);
-    console.log(usersFilter);
-    console.log(users);
     useEffect(()=>{
     const url = `https://gorest.co.in/public/v2/users?page=${userPage+1}&per_page=${usersPerPage}&access-token=4356fb7e13111d5ff3565de8a6c40cb296183a47f138d495fd14b5373f74a60f`
         // const url = `https://gorest.co.in/public/v2/users?page=${pageApi}&per_page=${usersPerPageApi}&access-token=${token}`
         const fetchUser = async ()=>{
             try {
                 const res = await axios.get(url)
-                console.log(res);
                 dispatch({type : GET_USERS, payload: res.data })
             } catch (error) {
                 console.log(error);
@@ -90,14 +86,12 @@ useEffect(()=>{
 const handleSortByName = ()=>{
        const   usersSort =  [...users]
        sortUser(usersSort,sort,"name")
-       console.log(usersSort);
        dispatch({type : SORT_BY_NAME, payload: usersSort })
        setSort(!sort)
         }
 const handleSortByEmail = ()=>{
             const   usersSort =  [...users]
             sortUser(usersSort,sort,"email")
-            console.log(usersSort);
             dispatch({type : SORT_BY_EMAIL, payload: usersSort })
             setSort(!sort)
              }
@@ -152,7 +146,6 @@ const handleFilter =(e)=>{
     const query = [nameElement.current.value,emailElement.current.value,genderElement.current.value]
     const usersFilter = filter(users, query,"users")
     dispatch( {type : FILTER_USERS, payload:usersFilter })
-    console.log(usersFilter)
     }
 
 const handleReset = (e)=>{
@@ -173,7 +166,6 @@ const handleClose = () => {
 const handleToggle = () => {
   dispatch({type : SET_IS_ADD_USER , payload : !isAddUser })
 };
-console.log(isAlert);
     return (
 
         <Container style={{ marginTop :"50px"}} >
